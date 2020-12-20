@@ -13,6 +13,8 @@ var emojiDictionary = {
 
 var emojiLists = Object.keys(emojiDictionary);
 
+var directionEmoji = '👇';
+
 export default function App() {
   const [emojiMeaning, handleInputText] = useState("");
 
@@ -49,7 +51,7 @@ export default function App() {
 
       <h2 style={{ color: "red" }}>{emojiMeaning}</h2>
 
-      <h3>Please select an emoji from below list 👇</h3>
+      <h3>Please select an emoji from below list <span>{directionEmoji}</span></h3>
 
       <ul>
         {emojiLists.map((emoji) => {
